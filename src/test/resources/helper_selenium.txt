@@ -1,4 +1,4 @@
-Литература:
+﻿Литература:
 web - https://comaqa.gitbook.io/selenium-webdriver-lectures/selenium-webdriver.-slozhnye-voprosy./webdriver-api.-slozhnye-vzaimodeistviya.
 
 
@@ -8,6 +8,12 @@ web - https://comaqa.gitbook.io/selenium-webdriver-lectures/selenium-webdriver.-
 
 2. Поиск форм и отправка пользовательских данных
 	driver.findElement(By.id("lst-ib")).sendKeys("javatpoint tutorials"); 
+
+
+
+
+
+
 
 3. Очистка вводимых пользователем данных
 	driver.findElement(By.name("q")).clear(); 
