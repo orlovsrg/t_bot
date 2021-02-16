@@ -1,0 +1,133 @@
+Литература:
+web - https://comaqa.gitbook.io/selenium-webdriver-lectures/selenium-webdriver.-slozhnye-voprosy./webdriver-api.-slozhnye-vzaimodeistviya.
+
+
+1. Получение веб-страницы
+	driver.get("www.javatpoint.com") 
+	driver.navigate().to("https://javatpoint.com/selenium-tutorial"); 
+
+2. Поиск форм и отправка пользовательских данных
+	driver.findElement(By.id("lst-ib")).sendKeys("javatpoint tutorials"); 
+
+3. Очистка вводимых пользователем данных
+	driver.findElement(By.name("q")).clear(); 
+	
+4. Получение данных через любой веб-элемент
+	driver.findElement(By.id("element567")).getText();
+	
+5. Выполнение события Click
+	driver.findElement(By.id("btnK")).click();
+	
+6. Переход назад по истории браузера
+	driver.navigate().back();
+	
+7. Переход вперед по истории браузера
+	driver.navigate().forward();
+	
+8. Обновите / перезагрузите веб-страницу.
+	driver.navigate().refresh();
+	
+9. Закрытие браузера
+	driver.close(); 
+	
+10. Закройте браузер и все остальные окна, связанные с драйвером
+	driver.quit();
+	
+13. Перемещение между кадрами
+	driver.switchTo().frame("frameName");
+	
+14. Перетаскивание
+	WebElement element = driver.findElement(By.name("source"));  
+	WebElement target = driver.findElement(By.name("target"));  
+	(new Actions(driver)).dragAndDrop(element, target).perform();  
+	
+	
+Примеры поиска cssSelector:
+	
+	По id
+	driver.findElement(By.cssSelector("input#fname"))
+	driver.findElement(By.cssSelector("button#idOfButton"))  
+	
+	По class
+	driver.findElement(By.cssSelector("input.Automation")) 
+	
+	По атрибуту
+	driver.findElement(By.cssSelector("button[id='idOfButton']")) 
+	
+	По class и атрибуту
+	driver.findElement(By.cssSelector("tag.class[attribute=value]"))
+	
+	По префиксу атрибута
+	
+	начало строки
+	driver.findElement(By.cssSelector("Tag[attribute^=prefix of the string]")) 
+	driver.findElement(By.cssSelector("button[id^='idOf']"))
+	
+	конец строки
+	driver.findElement(By.cssSelector("button[id$='on']")) 
+	
+	подстрока
+	driver.findElement(By.cssSelector("input[id*='id']")) 
+	driver.findElement(By.cssSelector("input:contains('id')")) \
+	
+	абсолютній путь
+	findElement(By.xpath("html/body/div[1]/div[2]/div[2]/div[1]/form/div[1]/div/div[1]/div/div/input[1]"));
+	
+	относительній путь
+	findElement(By.xpath("//form/div[1]/div/div[1]/div/div/input[1]"));  
+	
+	по атрибуту 
+	findElement(By.xpath("//*[@id="lst-ib"]")); 
+	
+	по нескольким атрибутам
+	findElement(By.xpath("//*[@id='lst-ib'][@class='gsfi lst-d-f']"));
+	
+	и
+	findElement(By.xpath("//*[@id='lst-ib' and @class='gsfi lst-d-f']"))
+	
+	или
+	findElement(By.xpath("//*[@id='lst-ib' or @class='gsfi lst-d-f']")); 
+	
+	содержит
+	findElement(By.xpath("//*[contains(@id,'lst-ib')]")); 
+	
+	начинается с 
+	findElement(By.xpath("//*[starts-with(@id,'lst')]")); 
+	
+	по тексту єллемента
+	findElement(By.xpath("//*[text()='Google offered in')]"));
+	
+	по окончанию текста в аттрибуте
+	findElement(By.xpath("(//input[@type='text'])[last()]"))
+	
+	template
+	Xpath=//tagname[@attribute='value']
+	
+	Выбирает все элементы в документе текущего узла
+	Xpath=//*[@type='text']//following::input
+	
+	Предок
+	Xpath=//*[text()='Enterprise Testing']//ancestor::div
+	
+	Ребенок
+	Xpath=//*[@id='java_technologies']/child::li
+	
+	Предшествующий
+	Xpath=//*[@type='submit']//preceding::input
+	
+	Следующие братья и сестры
+	xpath=//*[@type='submit']//following-sibling::input
+	
+	Родитель
+	Xpath=//*[@id='rt-feature']//parent::div
+	
+	Сам эллемент
+	Xpath =//*[@type='password']//self::input
+	
+	
+	
+	
+	
+	
+	
+	

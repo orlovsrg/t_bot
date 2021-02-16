@@ -1,0 +1,2 @@
+﻿2020-12-26 04:29:01,271 ERROR orlov.poject.tbot.service.ManagerService [Thread-24] chatId in sendSignal(): 447512111
+2020-12-26 04:29:01,481 ERROR orlov.poject.tbot.service.ManagerService [Thread-24] chatId in sendSignal(): 619395843
